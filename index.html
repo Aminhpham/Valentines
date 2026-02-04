@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine?</title>
+  <link rel="stylesheet" href="static.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffe6ec;
+      padding-top: 80px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #d6336c;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    #gif, #noGif {
+      width: 250px;
+      margin: 20px auto;
+      display: block;
+      animation: fadeIn 1.5s ease-out;
+      border-radius: 15px;
+    }
+
+    #noGif {
+      display: none;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+      animation: fadeInUp 2s ease-out;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+      z-index: 10;
+    }
+
+    #yesBtn:hover {
+      background-color: #ff3355;
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 6px 12px rgba(255, 77, 109, 0.4);
+    }
+
+    #noBtn {
+      background-color: #adb5bd;
+      color: white;
+      z-index: 1;
+    }
+
+    #noBtn:hover {
+      background-color: #95a0a8;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .success-screen {
+      animation: zoomIn 0.5s ease-out;
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+    <div id="heartLayer"></div>
+
+  <h1>Will you be my Valentine?</h1>
+
+  <img id="gif" src="https://media1.tenor.com/m/E4auL-XxaaYAAAAd/floreyonce-cat.gif" alt="cute gif">
+
+  <img id="noGif" src="https://media1.tenor.com/m/6vT_DoPOzq0AAAAd/sad-cat-cat-in-front-of-sea.gif" style="display:none;" alt="sad gif">
+
+  <div>
+    <button id="yesBtn" class="btn">Yes</button>
+    <button id="noBtn" class="btn">No</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
